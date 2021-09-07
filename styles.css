@@ -1,0 +1,63 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set color variables */
+:root {
+  --white: #fff;
+  --black: #111;
+  --red: rgba(255, 0, 0, 0.5);
+  --green: rgba(0, 255, 0, 0.25);
+  --blue1: cornflowerblue;
+  --blue2: rgba(0, 0, 255, 1);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--black);
+}
+
+/* Center text */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--white);
+  font-size: 9vw;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px var(--white), 0 0 7px var(--white), 0 0 10px var(--white),
+    1rem 0 20px var(--red), -0.75rem 0 20px var(--green),
+    0 0.5rem 20px var(--blue2), 0 0 45px var(--blue1), 0 0 70px var(--blue1),
+    0 0 100px var(--blue1), 0 0 130px var(--blue1), 0 0 155px var(--blue1);
+  animation: blink 0.1s infinite alternate;
+}
+
+/* Animate title */
+@keyframes blink {
+  0%,
+  15%,
+  30%,
+  45%,
+  75%,
+  100% {
+    text-shadow: 0 0 5px var(--white), 0 0 7px var(--white),
+      0 0 10px var(--white), 1rem 0 20px var(--red),
+      -0.75rem 0 20px var(--green), 0 0.5rem 20px var(--blue2),
+      0 0 45px var(--blue1), 0 0 70px var(--blue1), 0 0 100px var(--blue1),
+      0 0 130px var(--blue1), 0 0 155px var(--blue1);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
